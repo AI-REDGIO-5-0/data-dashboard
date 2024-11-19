@@ -244,10 +244,7 @@ def main():
     """Main function to run the Streamlit app for data analysis and visualization."""
     
     # Display logo (if exists)
-    if os.path.exists("logo.png"):
-        st.image("logo.png", width=400)
-    else:
-        st.write("Logo not found.")
+    st.image("logo.png", width=400)
 
     # Title and Information
     st.title('Data Analysis Dashboard')
