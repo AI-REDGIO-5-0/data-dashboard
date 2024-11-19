@@ -105,9 +105,19 @@ WHERE {
 - `requirements.txt`: List of dependencies.
 - `knowledge_graph.html`: Generated visualization for the RDF graph.
 
-## Contributions
+## Citation
+For academic use, please refer to our work:
 
-Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+```
+@article{martinez2023examining,
+  title={Examining the Adoption of Knowledge Graphs in the Manufacturing Industry: A Comprehensive Review},
+  author={Martinez-Gil, Jorge and Hoch, Thomas and Pichler, Mario and Heinzl, Bernhard and Moser, Bernhard and Kurniawan, Kabul and Kiesling, Elmar and Krause, Franz},
+  journal={Artificial Intelligence in Manufacturing: Enabling Intelligent, Flexible and Cost-Effective Production Through AI},
+  pages={55--70},
+  year={2023},
+  publisher={Springer Nature Switzerland Cham}
+}
+```
 
 ## License
 
