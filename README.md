@@ -5,6 +5,8 @@ This project is a comprehensive data analysis and visualization dashboard, integ
 
 A live demo of this component can be found at: [https://airedgio-dashboard.streamlit.app/](https://airedgio-dashboard.streamlit.app/)
 
+![Screenshot](screen.png)
+
 ## Features
 
 - **Data Upload and Preprocessing**:  
