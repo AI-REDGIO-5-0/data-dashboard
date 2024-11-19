@@ -3,7 +3,6 @@ pandas
 numpy
 plotly
 scipy
-json
 streamlit
 scikit-learn
 rdflib
