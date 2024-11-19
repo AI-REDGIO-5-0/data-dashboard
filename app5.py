@@ -224,46 +224,44 @@ def fetch_file_from_url(url):
     st.error(f'Invalid file path or URL: {url}')
     return None
 
+# Function to handle file upload and preprocess it
+def handle_file_upload():
+    """Allow users to upload a CSV file and preprocess the data."""
+    uploaded_file = st.file_uploader('Upload a CSV file for analysis', type=['csv'], key='file_uploader')
+    if uploaded_file is not None:
+        try:
+            # Load the file into a pandas DataFrame
+            df = pd.read_csv(uploaded_file)
+            st.success("File uploaded successfully!")
+            return df
+        except Exception as e:
+            st.error(f"Error reading the file: {e}")
+    else:
+        st.info("Please upload a CSV file.")
+    return None
+
 # Main function to run the Streamlit app
 def main():
     """Main function to run the Streamlit app for data analysis and visualization."""
     
-    # Logo Display
-    if os.path.exists("logo.png"):  # Check if the logo file exists
+    # Display logo (if exists)
+    if os.path.exists("logo.png"):
         st.image("logo.png", width=400)
     else:
-        st.write("Logo not found.")  # Inform the user if logo is missing
+        st.write("Logo not found.")
 
     # Title and Information
     st.title('Data Analysis Dashboard')
 
-    # File Path Handling (Improved)
-    file_url = st.query_params["file_url"]
+    # Handle file upload
+    df = handle_file_upload()
 
-    if file_url:
-        try:
-            file_path = urllib.parse.unquote(file_url)
-            st.write(f"Decoded file path: {file_path}")
-
-            # Explicitly check for file existence
-            if os.path.exists(file_path):
-                st.success(f"File found: {file_path}")  # Clear success message
-
-                # Process file (Assuming you have this function)
-                df = process_uploaded_file(file_path)
-                if df is not None:
-                    perform_data_analysis(df)
-                else:
-                    st.error("Error processing file. Please check file format.")
-
-            else:
-                st.error(f"File not found: {file_path}")
-
-        except (UnicodeDecodeError, urllib.error.URLError) as e:
-            st.error(f"Error decoding or fetching URL: {e}")
-
+    if df is not None:
+        # Perform data analysis if a valid DataFrame is uploaded
+        perform_data_analysis(df)
     else:
-        st.info("Please upload a file or provide a file path via URL parameter.")
+        st.warning("Awaiting file upload for further analysis.")
+
 
 
 
