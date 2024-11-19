@@ -3,6 +3,10 @@
 
 This project is a comprehensive data analysis and visualization dashboard, integrated with knowledge graph functionality. It allows users to upload datasets, perform correlation analysis, apply inference rules, and visualize relationships through an interactive RDF-based knowledge graph.
 
+A live demo of this component can be found at: [https://airedgio-dashboard.streamlit.app/](https://airedgio-dashboard.streamlit.app/)
+
+![Screenshot](screen.png)
+
 ## Features
 
 - **Data Upload and Preprocessing**:  
