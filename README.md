@@ -122,3 +122,6 @@ For academic use, please refer to our work:
 ## License
 
 This project is licensed under the MIT License. 
+
+## Acknowledgement
+This work is performed in the context of the AI REDGIO 5.0 “Regions and (E)DIHs alliance for AI-at-the-Edge adoption by European Industry 5.0 Manufacturing SMEs” EU Innovation Action Project under Grant Agreement No 101092069.
